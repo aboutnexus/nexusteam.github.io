@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexus Team</title>
+<meta name="description" content="Nexus builds Minecraft communities: NexusSky, GawnPvP and Nexus Community.">
+<link rel="icon" href="nexus-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0b14; --surface:#12141f; --line:#232640; --text:#e9ebf5; --muted:#9aa0bd; --accent:#4455ff; --accent2:#6b7cff;
+  --display:'Rajdhani','Arial Narrow',sans-serif; --body:'Inter',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: light){
+  :root{--bg:#f3f4fb;--surface:#fff;--line:#dcdff0;--text:#12142a;--muted:#555b7a}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 16px/1.6 var(--body)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand img{height:26px}
+nav ul{display:flex;gap:24px;list-style:none;padding:0}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px}
+nav ul a:hover{color:var(--text)}
+.hero{padding:96px 0 72px;text-align:center}
+.hero img{height:84px;margin:0 auto 28px}
+.hero h1{font:700 clamp(40px,7vw,72px)/1.05 var(--display);letter-spacing:.01em;max-width:14ch;margin:0 auto}
+.hero p{color:var(--muted);max-width:52ch;margin:18px auto 30px;font-size:18px}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:12px 24px;border-radius:10px;transition:background .15s}
+.btn:hover{background:var(--accent2)}
+section{padding:64px 0}
+h2{font:700 36px/1.1 var(--display);margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:36px;max-width:56ch}
+.project{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:24px}
+.project:nth-child(even) .media{order:2}
+.media{min-height:260px;background:#000 center/cover no-repeat;display:flex;align-items:center;justify-content:center}
+.media.icon{background:var(--bg)}
+.media.icon img{width:150px;height:150px;border-radius:30px}
+.media.logo img{width:70%}
+.info{padding:34px 32px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px}
+.info h3{font:700 30px/1.1 var(--display)}
+.info p{color:var(--muted)}
+.info a.link{font-weight:600;color:var(--accent2);text-decoration:none;border-bottom:1px solid currentColor}
+.founder{display:flex;align-items:center;gap:28px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;max-width:640px}
+.founder img{width:120px;height:120px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--accent)}
+.founder h3{font:700 28px/1.1 var(--display)}
+.founder .role{color:var(--accent2);font-weight:600;margin-bottom:6px}
+.founder p{color:var(--muted)}
+.join{text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:56px 24px}
+.join p{color:var(--muted);margin:8px auto 24px;max-width:46ch}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
+@media(max-width:760px){
+  nav ul{gap:14px}
+  .project{grid-template-columns:1fr}
+  .project:nth-child(even) .media{order:0}
+  .founder{flex-direction:column;text-align:center}
+  .hero{padding:64px 0 48px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Nexus home"><img src="nexus-wordmark.png" alt="Nexus"></a>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#founder">Founder</a></li>
+      <li><a href="#join">Join</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <img src="nexus-icon.png" alt="Nexus logo">
+    <h1>Building worlds players come back to.</h1>
+    <p>Nexus is a team behind Minecraft servers and communities. Pick a project and jump in.</p>
+    <a class="btn" href="#projects">See our projects</a>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Our projects</h2>
+    <p class="sub">Three places to play and hang out, all run by Nexus.</p>
+
+    <article class="project">
+      <div class="media" style="background-image:url('nexussky-world.jpg')" role="img" aria-label="NexusSky spawn island"></div>
+      <div class="info">
+        <img src="nexussky.png" alt="" width="56" height="56" style="border-radius:14px">
+        <h3>NexusSky</h3>
+        <p>Skyblock islands floating over a starry night. Build, expand and trade with other players.</p>
+        <a class="link" href="#join">Join NexusSky</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="media icon"><img src="gawnpvp.png" alt="GawnPvP logo"></div>
+      <div class="info">
+        <h3>GawnPvP</h3>
+        <p>Fast PvP with crossed swords and ranked fights. Queue up, duel, and climb the leaderboard.</p>
+        <a class="link" href="#join">Join GawnPvP</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="media icon logo" style="background:#0a0b14"><img src="nexus-wordmark.png" alt="Nexus Community logo"></div>
+      <div class="info">
+        <img src="nexus-icon.png" alt="" width="56" height="56" style="border-radius:14px">
+        <h3>Nexus Community</h3>
+        <p>The hub for every Nexus player. Get news, find support, and meet people from all our servers.</p>
+        <a class="link" href="#join">Join the community</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="founder">
+  <div class="wrap">
+    <h2>The founder</h2>
+    <p class="sub">One person started Nexus and still steers it.</p>
+    <div class="founder">
+      <img src="vexservin.jpg" alt="VexServin avatar">
+      <div>
+        <h3>VexServin</h3>
+        <div class="role">Founder</div>
+        <p>Leads Nexus and its projects, from NexusSky to GawnPvP and the community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <div class="join">
+      <h2>Join Nexus</h2>
+      <p>Add your Discord invite link below to let players find you.</p>
+      <!-- TODO: replace # with your Discord invite -->
+      <a class="btn" href="#">Join our Discord</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">&copy; 2026 Nexus. Not affiliated with Mojang or Microsoft.</div>
+</footer>
+</body>
+</html>
